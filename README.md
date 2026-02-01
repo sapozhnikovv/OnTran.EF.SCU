@@ -5,6 +5,20 @@ Use your EF-based code without any changes, without raw SQL, without breaking th
 Minimal, Effective, multi-target EF Core extension for run short-lived contexts on the same connection and transaction when micro-ORM cannot be used.   
 Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.   
 
+## DI-Friendly Integration   
+Services resolved from the dependency injection scope within the functor automatically use the shared main transaction and connection, without any code changes.
+
+## Key Difference from TransactionScope   
+Unlike TransactionScope (which uses ambient transactions with Linux/container limitations), this extension:   
+- Uses explicit connection/transaction sharing (no MSDTC dependency)   
+- Works natively in Docker/Linux containers   
+- Creates scoped short-lived contexts that integrate with DI   
+
+All services from the dependency injection scope automatically use the shared transaction and connection.    
+
+* It is not only about 'set connection and transaction for context', it also about 'create scoped short-lived context for services from scope' and use local transaction.   
+
+
 Support DB types:   
 ✅ MySql-based   
 ✅ Postgres-based   
@@ -16,6 +30,7 @@ Support DB types:
 These tests on .net8.0 and use TestContainers to run DB in Docker. 
 
 If the functionality of this solution does not meet your needs, feel free to make your own version of this extension or just copy-paste code in your solution and change. It is open source.
+
 
 # Nuget
 multi-target package:   
