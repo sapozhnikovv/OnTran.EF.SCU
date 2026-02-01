@@ -7,9 +7,9 @@ Short-lived contexts will be used as the SQL formatter, without storing all inse
 
 Support DB types:
 
-*✅ MySql-based
-*✅ Postgres-based
-*✅ MS Sql
+* ✅ MySql-based
+* ✅ Postgres-based
+* ✅ MS Sql
 
 * Other database types can be used, but testing was only done on these three.
 
