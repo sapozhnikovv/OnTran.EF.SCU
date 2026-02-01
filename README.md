@@ -1,14 +1,14 @@
 ﻿# [OnTran.EF.SCU](https://github.com/sapozhnikovv/OnTran.EF.SCU)
 ![Logo](https://github.com/sapozhnikovv/OnTran.EF.SCU/blob/main/img/ontranef.png)
 
-Use your EF-based code without any changes, without raw SQL, without breaking the transactionality and without application crashes due to OutOfMemory errors.
-Minimal, Effective, multi-target EF Core extension for run short-lived contexts on the same connection and transaction when micro-ORM cannot be used.
-Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.
+Use your EF-based code without any changes, without raw SQL, without breaking the transactionality and without application crashes due to OutOfMemory errors.   
+Minimal, Effective, multi-target EF Core extension for run short-lived contexts on the same connection and transaction when micro-ORM cannot be used.   
+Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.   
 
-Support DB types:
-.✅ MySql-based
-.✅ Postgres-based
-.✅ MS Sql
+Support DB types:   
+✅ MySql-based   
+✅ Postgres-based   
+✅ MS Sql   
 
 * Other database types can be used, but testing was only done on these three.
 
@@ -18,11 +18,11 @@ These tests on .net8.0 and use TestContainers to run DB in Docker.
 If the functionality of this solution does not meet your needs, feel free to make your own version of this extension or just copy-paste code in your solution and change. It is open source.
 
 # Nuget
-multi-target package:
-.✅ .net6.0
-.✅ .net7.0
-.✅ .net8.0 
-.✅ .net9.0
+multi-target package:   
+✅ .net6.0   
+✅ .net7.0   
+✅ .net8.0   
+✅ .net9.0   
 
 https://www.nuget.org/packages/OnTran.EF.SCU
 
