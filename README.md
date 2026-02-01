@@ -88,7 +88,7 @@ await context.Database.ConstructScopedContextOnCurrentTranAsync<DBContext>(servi
 await context.Database.ConstructScopedContextOnCurrentTranAsync<DBContext>(serviceScopeFactory, async (db, scope) =>
 {
     await scope.GetService<MyService>().ProcessManyRecordsAndInsertManyRecordsWithComplicatedLogicAsync(token);
-	//The DbContext instance injected into MyService from 'scope' uses the main transaction/connection.
+	//The DbContext instance injected into MyService from 'scope' without own connection and transaction, it is 'db' from functor, it uses the main transaction/connection from 'context'.
 	//So, you can use any services via DI without code changes.
 }, token);
 //all TestEntity will be gone (not immediately) from memory because 'db' context from the method above is disposed.
