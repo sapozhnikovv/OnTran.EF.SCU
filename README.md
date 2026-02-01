@@ -6,8 +6,11 @@ Minimal, Effective, multi-target EF Core extension for run short-lived contexts 
 Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.
 
 Support DB types:
+
 ✅ MySql-based
+
 ✅ Postgres-based
+
 ✅ MS Sql
 
 * Other database types can be used, but testing was only done on these three.
