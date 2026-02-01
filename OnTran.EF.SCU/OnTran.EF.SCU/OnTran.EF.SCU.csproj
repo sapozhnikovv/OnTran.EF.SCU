@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>OnTran.EF.SCU</Title>
+	  <Authors>Vyacheslav Sapozhnikov</Authors>
+	  <Description>Use your EF-based code without any changes, without raw SQL, without breaking the transactionality and without application crashes due to OutOfMemory errors. Minimal, Effective, multi-target EF Core extension for run short-lived contexts on the same connection and transaction when micro-ORM cannot be used. Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.</Description>
+	  <Copyright>Copyright (c) 2026 VSapozhnikov</Copyright>
+	  <PackageTags>EF; EF Core; EntityFrameworkCore; EntityFramework; Entity Framework Core; Entity Framework; Transaction; Connection; Memory; Existed transaction; trx; tran; con; conn; OOM; transactionality; EF-based; extension; short-lived; context; crashes; ORM; micro-ORM; SQL; MySql; MsSql; MS SQL; Postgres;</PackageTags>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <IncludeSymbols>True</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	  <PackageProjectUrl>https://github.com/sapozhnikovv/OnTran.EF.SCU</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/sapozhnikovv/OnTran.EF.SCU</RepositoryUrl>
+	  <PackageIcon>logo.jpg</PackageIcon>
+	  <PackageId>OnTran.EF.SCU</PackageId>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <Version>1.0.0.0</Version>
+	  <PackageDependencies>Microsoft.EntityFrameworkCore(&gt;=6.0.0)</PackageDependencies>
+	  <PackageDependencies>Microsoft.EntityFrameworkCore.Relational(&gt;=6.0.0)</PackageDependencies>
+	  <PackageDependencies>Microsoft.Extensions.DependencyInjection.Abstractions(&gt;=6.0.0)</PackageDependencies>
+	  <TargetFrameworks>net6.0;net7.0;net8.0;net9.0</TargetFrameworks>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+		</None>
+		<None Include="img\logo.jpg">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="[6.0.0, 7.0.0)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[6.0.0, 7.0.0)" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="[6.0.0, 7.0.0)" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="[7.0.0, 8.0.0)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[7.0.0, 8.0.0)" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="[7.0.0, 8.0.0)" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="[8.0.0, 9.0.0)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[8.0.0, 9.0.0)" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="[8.0.0, 9.0.0)" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="[9.0.0, 10.0.0)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="[9.0.0, 10.0.0)" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="[9.0.0, 10.0.0)" />
+	</ItemGroup>
+	
+</Project>
