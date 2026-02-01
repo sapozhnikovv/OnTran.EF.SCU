@@ -6,10 +6,9 @@ Minimal, Effective, multi-target EF Core extension for run short-lived contexts 
 Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.
 
 Support DB types:
-
-* ✅ MySql-based
-* ✅ Postgres-based
-* ✅ MS Sql
+.✅ MySql-based
+.✅ Postgres-based
+.✅ MS Sql
 
 * Other database types can be used, but testing was only done on these three.
 
@@ -20,10 +19,10 @@ If the functionality of this solution does not meet your needs, feel free to mak
 
 # Nuget
 multi-target package:
-*✅ .net6.0
-*✅ .net7.0
-*✅ .net8.0 
-*✅ .net9.0
+.✅ .net6.0
+.✅ .net7.0
+.✅ .net8.0 
+.✅ .net9.0
 
 https://www.nuget.org/packages/OnTran.EF.SCU
 
