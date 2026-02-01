@@ -29,7 +29,7 @@ Support DB types:
 > **Note**: While this extension should work with any EF Core provider, testing has only been performed on these three databases.
 
 [Examples-Tests](https://github.com/sapozhnikovv/OnTran.EF.SCU/tree/main/Examples-Tests)
-These tests on .net8.0 and use TestContainers to run DB in Docker. 
+These tests are run on the .NET8.0 using TestContainers to run the DB's in Docker.
 
 If the functionality of this solution does not meet your needs, feel free to make your own version of this extension or just copy-paste code in your solution and change. It is open source.
 
