@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.MySql", "EF.MySql\EF.MyS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOnMySql", "TestOnMySql\TestOnMySql.csproj", "{8335242B-A829-4CA5-8833-499D0EF0BB48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTran.EF.SCU", "..\..\OnTran.EF.SCU\OnTran.EF.SCU\OnTran.EF.SCU.csproj", "{C7130642-3859-A0B7-C1E6-2C349D3DC0BA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{8335242B-A829-4CA5-8833-499D0EF0BB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8335242B-A829-4CA5-8833-499D0EF0BB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8335242B-A829-4CA5-8833-499D0EF0BB48}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7130642-3859-A0B7-C1E6-2C349D3DC0BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7130642-3859-A0B7-C1E6-2C349D3DC0BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7130642-3859-A0B7-C1E6-2C349D3DC0BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7130642-3859-A0B7-C1E6-2C349D3DC0BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
