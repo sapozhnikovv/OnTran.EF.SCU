@@ -11,14 +11,14 @@ The main purpose of this extension is Memory Management. By using short-lived co
 Services resolved from the dependency injection scope within the functor automatically use the shared main transaction and connection, without any code changes.
 
 ## Key Difference from TransactionScope   
-Unlike TransactionScope (which uses ambient transactions with the limitations for Linux/container), this extension:   
+Unlike TransactionScope (which uses ambient transactions with the limitations on Linux/container), this extension:   
 - Uses explicit connection/transaction sharing (no MSDTC dependency, no distributed transaction coordinator)   
 - Works natively in Docker/Linux containers   
 - Creates scoped short-lived contexts that integrate with DI   
 
 All services from the dependency injection scope automatically use the shared transaction and connection.    
 
-So, It is not only about 'set connection and transaction for context', it also about 'create scoped short-lived context for services from scope' and use local transaction -> it is about Memory Management.   
+In essence, it's not just about 'setting connection and transaction for context' - it's about creating scoped short-lived contexts for services that use the local transaction, with a primary focus on memory management.
 
 
 Support DB types:   
@@ -26,7 +26,7 @@ Support DB types:
 ✅ Postgres-based   
 ✅ MS Sql   
 
-* Other database types can be used, but testing was only done on these three.
+> **Note**: While this extension should work with any EF Core provider, testing has only been performed on these three databases.
 
 [Examples-Tests](https://github.com/sapozhnikovv/OnTran.EF.SCU/tree/main/Examples-Tests)
 These tests on .net8.0 and use TestContainers to run DB in Docker. 
@@ -50,6 +50,14 @@ or
 ```shell
 NuGet\Install-Package OnTran.EF.SCU
 ```
+
+## Why Use This Extension?
+
+| Scenario | Problem | Solution |
+|----------|---------|----------|
+| **Batch Insertions** | EF Context tracks all inserted entities, causing memory bloat | ✅ Short-lived contexts allow garbage collection |
+| **Microservices in Containers** | TransactionScope has limited Linux/Docker support | ✅ No MSDTC, works natively in containers |
+| **Complex Business Logic** | Need multiple DbContexts in one transaction without code duplication | ✅ Shared transaction with DI integration |
 
 ## Example of using
 
@@ -80,7 +88,7 @@ await context.Database.ConstructScopedContextOnCurrentTranAsync<DBContext>(servi
 await context.Database.ConstructScopedContextOnCurrentTranAsync<DBContext>(serviceScopeFactory, async (db, scope) =>
 {
     await scope.GetService<MyService>().ProcessManyRecordsAndInsertManyRecordsWithComplicatedLogicAsync(token);
-	//DB context instance from DI in MyService instance from scope.GetService<MyService>() will use not own transaction/connetion, but you main tran/conn.
+	//The DbContext instance injected into MyService from 'scope' uses the main transaction/connection.
 	//So, you can use any services via DI without code changes.
 }, token);
 //all TestEntity will be gone (not immediately) from memory because 'db' context from the method above is disposed.
