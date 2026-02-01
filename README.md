@@ -5,7 +5,7 @@ Use your EF-based code without any changes, without raw SQL, without breaking th
 Minimal, Effective, multi-target EF Core extension for run short-lived contexts on the same connection and transaction when micro-ORM cannot be used.   
 Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.   
 
-The main purpose of this extension if Memory Management. By using short-lived contexts, inserted entities can be garbage collected, preventing memory leaks.
+The main purpose of this extension is Memory Management. By using short-lived contexts, inserted entities can be garbage collected, preventing memory leaks.
 
 ## DI-Friendly Integration   
 Services resolved from the dependency injection scope within the functor automatically use the shared main transaction and connection, without any code changes.
