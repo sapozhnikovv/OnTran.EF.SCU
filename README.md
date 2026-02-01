@@ -16,7 +16,7 @@ Unlike TransactionScope (which uses ambient transactions with the limitations fo
 
 All services from the dependency injection scope automatically use the shared transaction and connection.    
 
-* It is not only about 'set connection and transaction for context', it also about 'create scoped short-lived context for services from scope' and use local transaction.   
+- It is not only about 'set connection and transaction for context', it also about 'create scoped short-lived context for services from scope' and use local transaction.   
 
 
 Support DB types:   
