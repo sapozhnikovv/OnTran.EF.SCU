@@ -1,5 +1,5 @@
 ﻿# [OnTran.EF.SCU](https://github.com/sapozhnikovv/OnTran.EF.SCU)
-![Logo](https://github.com/sapozhnikovv/OnTran.EF.SCU/blob/main/img/ontranef.png)
+![Logo](https://github.com/sapozhnikovv/OnTran.EF.SCU/blob/main/img/ontran.ef.png)
  
 Use your EF-based code without any changes, without raw SQL, without breaking the transactionality and without application crashes due to OutOfMemory errors.   
 Minimal, Effective, multi-target EF Core extension for run short-lived contexts on the same connection and transaction when micro-ORM cannot be used.   
