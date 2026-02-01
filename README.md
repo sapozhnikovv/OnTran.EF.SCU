@@ -10,7 +10,7 @@ Services resolved from the dependency injection scope within the functor automat
 
 ## Key Difference from TransactionScope   
 Unlike TransactionScope (which uses ambient transactions with the limitations for Linux/container), this extension:   
-- Uses explicit connection/transaction sharing (no MSDTC dependency)   
+- Uses explicit connection/transaction sharing (no MSDTC dependency, no distributed transaction coordinator)   
 - Works natively in Docker/Linux containers   
 - Creates scoped short-lived contexts that integrate with DI   
 
