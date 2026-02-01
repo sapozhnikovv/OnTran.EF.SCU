@@ -9,7 +9,7 @@ Short-lived contexts will be used as the SQL formatter, without storing all inse
 Services resolved from the dependency injection scope within the functor automatically use the shared main transaction and connection, without any code changes.
 
 ## Key Difference from TransactionScope   
-Unlike TransactionScope (which uses ambient transactions with Linux/container limitations), this extension:   
+Unlike TransactionScope (which uses ambient transactions with the limitations for Linux/container), this extension:   
 - Uses explicit connection/transaction sharing (no MSDTC dependency)   
 - Works natively in Docker/Linux containers   
 - Creates scoped short-lived contexts that integrate with DI   
