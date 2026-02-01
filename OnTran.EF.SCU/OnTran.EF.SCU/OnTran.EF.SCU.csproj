@@ -18,7 +18,7 @@
 	  <PackageIcon>logo.jpg</PackageIcon>
 	  <PackageId>OnTran.EF.SCU</PackageId>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
-	  <Version>1.0.0.1</Version>
+	  <Version>1.0.0.2</Version>
 	  <PackageDependencies>Microsoft.EntityFrameworkCore(&gt;=6.0.0)</PackageDependencies>
 	  <PackageDependencies>Microsoft.EntityFrameworkCore.Relational(&gt;=6.0.0)</PackageDependencies>
 	  <PackageDependencies>Microsoft.Extensions.DependencyInjection.Abstractions(&gt;=6.0.0)</PackageDependencies>

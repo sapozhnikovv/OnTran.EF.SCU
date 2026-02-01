@@ -12,7 +12,7 @@ Support DB types:
 
 * Other database types can be used, but testing was only done on these three.
 
-[Examples-Tests](https://github.com/sapozhnikovv/SCU.Serilog.Sinks.Telegram/tree/main/Examples-Tests)
+[Examples-Tests](https://github.com/sapozhnikovv/OnTran.EF.SCU/tree/main/Examples-Tests)
 These tests on .net8.0 and use TestContainers to run DB in Docker. 
 
 If the functionality of this solution does not meet your needs, feel free to make your own version of this extension or just copy-paste code in your solution and change. It is open source.
