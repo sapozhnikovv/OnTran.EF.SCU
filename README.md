@@ -2,7 +2,7 @@
 ![Logo](https://github.com/sapozhnikovv/OnTran.EF.SCU/blob/main/img/ontran.ef.png)
  
 Use your EF-based code without any changes, without raw SQL, without breaking the transactionality and without application crashes due to OutOfMemory errors.   
-Minimal, Effective, multi-target EF Core extension for run short-lived contexts on the same connection and transaction when micro-ORM (like Linq2db) cannot be used (and you cannot use batch data insertion for some reason).   
+Minimal, Effective, multi-target EF Core extension for run short-lived contexts on the same connection and transaction when micro-ORM (like Linq2db) cannot be used (and you cannot use bulk data insertion for some reason).   
 Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.   
 
 The main purpose of this extension is Memory Management. By using short-lived contexts, inserted entities can be garbage collected, preventing memory leaks.
