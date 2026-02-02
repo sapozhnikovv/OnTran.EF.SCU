@@ -26,9 +26,9 @@ In essence, it's not just about 'setting connection and transaction for context'
 Support DB types:   
 ✅ MySql-based   
 ✅ Postgres-based   
-✅ MS Sql   
+✅ MS SQL    
 
-> **Note**: While this extension should work with any EF Core provider, testing has only been performed on these three databases.
+> **Note**: While this extension should work with any EF Core provider, **testing has only been performed on these three databases (MySql, Postgres, MSSQL)**
 
 [Examples-Tests](https://github.com/sapozhnikovv/OnTran.EF.SCU/tree/main/Examples-Tests)
 These tests are run on the .NET8.0 using TestContainers to run the DB's in Docker.
