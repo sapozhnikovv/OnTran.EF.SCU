@@ -7,6 +7,8 @@ Short-lived contexts will be used as the SQL formatter, without storing all inse
 
 The main purpose of this extension is Memory Management. By using short-lived contexts, inserted entities can be garbage collected, preventing memory leaks.
 
+**To save memory, you need to call this extension several times to insert a large number of objects; If you need to insert 1_000_000 objects, then you can call this extension for each 1_000 - 10_000 pieces**   
+
 ## DI-Friendly Integration   
 Services resolved from the dependency injection scope within the functor automatically use the shared main transaction and connection, without any code changes.
 
