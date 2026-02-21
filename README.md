@@ -37,6 +37,7 @@ If the functionality of this solution does not meet your needs, feel free to mak
 
 
 # Nuget
+[![NuGet](https://img.shields.io/nuget/v/OnTran.EF.SCU)](https://www.nuget.org/packages/OnTran.EF.SCU)   
 multi-target package:   
 ✅ .net6.0   
 ✅ .net7.0   
