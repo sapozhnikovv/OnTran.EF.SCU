@@ -6,7 +6,7 @@ Minimal, Effective, multi-target EF Core extension for run short-lived contexts 
 Short-lived contexts will be used as the SQL formatter, without storing all inserted objects in the application memory due to the short lifetime of the scoped context.   
    
 If you insert any entity in DB via EF, this entity will not be collected by GC until EF Context is disposed.  
-You cannot 'untracking' or 'remove object from memory' if that entity was Added/Inserted via EF.   
+You cannot 'untrack' or 'remove object from memory' if that entity was Added/Inserted via EF.   
 If lifetome of context is not short and you are low on RAM - you need to run shortlived EF contexts within the current transaction. This solution does that for you.   
    
 The **main purpose** of this extension **is Memory Management**. By using short-lived contexts, inserted entities can be garbage collected, **preventing memory leaks**.
@@ -28,7 +28,7 @@ In essence, it's not just about 'setting connection and transaction for context'
     
     
 If you insert any entity in DB via EF, this entity will not be collected by GC until EF Context is disposed.  
-You cannot 'untracking' or 'remove object from memory' if that entity was Added/Inserted via EF.   
+You cannot 'untrack' or 'remove object from memory' if that entity was Added/Inserted via EF.   
 If lifetome of context is not short and you are low on RAM - you need to run shortlived EF contexts within the current transaction. This solution does that for you.
     
 Support DB types:   
