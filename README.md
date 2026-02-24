@@ -21,8 +21,12 @@ Unlike TransactionScope (which uses ambient transactions with the limitations on
 All services from the dependency injection scope automatically use the shared transaction and connection.    
 
 In essence, it's not just about 'setting connection and transaction for context' - it's about creating scoped short-lived contexts for services that use the local transaction, with a primary focus on memory management.
-
-
+    
+    
+If you insert any entity in DB via EF, this entity will not be collected by GC before disposing EF Context.  
+You cannot 'remove tracking' or 'delete object from memory' if this entity was Added/Inserted via EF.   
+If lifetome of context is not short and you have small amount of RAM - you need to rin shortlived EF contexts on current transaction. This solution do it for you.
+    
 Support DB types:   
 ✅ MySql-based   
 ✅ Postgres-based   
